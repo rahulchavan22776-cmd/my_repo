@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML - Version 3</title>
+    <title>Basic HTML - Version 4</title>
 
     <style>
         body {
@@ -31,10 +31,6 @@
             line-height: 1.6;
         }
 
-        ul {
-            margin-left: 20px;
-        }
-
         button {
             padding: 10px 20px;
             background-color: #007bff;
@@ -55,6 +51,12 @@
             color: #777;
             font-size: 14px;
         }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
     </style>
 </head>
 
@@ -64,23 +66,25 @@
         <h1>Welcome to My Website</h1>
 
         <p>
-            This is Version 3 of a basic HTML page.
-            It uses simple CSS to improve the design while keeping everything beginner-friendly.
+            This is Version 4 of a basic webpage.
+            Now it includes JavaScript to make the page interactive.
         </p>
 
-        <h2>What You’ll Learn</h2>
-        <ul>
-            <li>HTML structure</li>
-            <li>Basic CSS styling</li>
-            <li>Clean layout</li>
-        </ul>
+        <button onclick="showMessage()">Click Me</button>
 
-        <button>Get Started</button>
+        <p id="message"></p>
 
         <footer>
-            <p>© 2025 | Built with HTML & CSS</p>
+            <p>© 2025 | HTML • CSS • JavaScript</p>
         </footer>
     </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "✅ Button clicked! JavaScript is working.";
+        }
+    </script>
 
 </body>
 </html>
